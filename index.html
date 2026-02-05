@@ -295,22 +295,37 @@
       .name-row{ grid-template-columns:1fr; }
       .nav{ gap:16px; }
     }
+
+    /* Header zentriert (Name oben, Menu darunter) */
+    .header-center{
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .header-center .brand{
+      text-align: center;
+    }
+
+    .nav-center{
+      justify-content: center;
+    }
+
   </style>
 </head>
 
 <body>
   <header class="header">
-    <div class="header-inner">
-      <div class="brand">DR. BARBARA E. LUDWIG</div>
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="#home" class="navlink active">HOME</a>
-        <a href="#ueber-mich" class="navlink">ÜBER MICH</a>
-        <a href="#kontakt" class="navlink">KONTAKT</a>
-      </nav>
-      <!-- rechter Platzhalter (damit Logo links + Nav mittig optisch wie im Screenshot wirkt) -->
-      <div style="width:180px;"></div>
-    </div>
+   <div class="header-inner header-center">
+    <div class="brand">DR. BARBARA E. LUDWIG</div>
+
+    <nav class="nav nav-center" aria-label="Hauptnavigation">
+      <a href="#home" class="navlink active">HOME</a>
+      <a href="#ueber-mich" class="navlink">ÜBER MICH</a>
+      <a href="#kontakt" class="navlink">KONTAKT</a>
+    </nav>
+   </div>
   </header>
+
 
   <!-- HOME -->
   <section id="home">
