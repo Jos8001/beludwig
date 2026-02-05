@@ -42,7 +42,7 @@ $body .= "Mitteilung:\n{$msg}\n";
 // WICHTIG für Zustellbarkeit:
 // From sollte idealerweise eine Adresse der eigenen Domain sein.
 // Wenn Du noch keine Mailbox hast, nimm z.B. info@beludwig.ch oder no-reply@beludwig.ch (muss bei manchen Setups existieren).
-$fromAddress = "no-reply@beludwig.ch";
+$fromAddress = "bel@beludwig.ch";
 $fromName = "beludwig.ch Website";
 
 $headers = [];
