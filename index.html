@@ -496,7 +496,7 @@ HJMS AG
 CH-8001 Zürich
         </div>
 
-        <form action="#" method="post">
+        <form action="send.php" method="post">
           <label for="first">Name<span class="req">*</span></label>
           <div class="name-row">
             <input id="first" name="first" type="text" placeholder="First" required>
@@ -508,6 +508,11 @@ CH-8001 Zürich
 
           <label for="msg">Mitteilung<span class="req">*</span></label>
           <textarea id="msg" name="message" required></textarea>
+
+          <div style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;">
+           <label for="website">Website</label>
+           <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
 
           <button class="btn" type="submit">Senden</button>
         </form>
