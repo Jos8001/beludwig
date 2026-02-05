@@ -515,6 +515,12 @@ CH-8001 Zürich
           </div>
 
           <button class="btn" type="submit">Senden</button>
+
+          <p id="thanks"
+           style="display:none; font-size:11px; color:#4b5563; margin-top:14px;">
+           Danke, Ihre Nachricht wurde gesendet.
+          </p>
+
         </form>
       </div>
     </div>
@@ -539,6 +545,15 @@ CH-8001 Zürich
 
     window.addEventListener('scroll', setActive, { passive:true });
     window.addEventListener('load', setActive);
+
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("sent") === "1") {
+      const thanks = document.getElementById("thanks");
+      if (thanks) {
+        thanks.style.display = "block";
+      }
+    }
+    
   </script>
 </body>
 </html>
